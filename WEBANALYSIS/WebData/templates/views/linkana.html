@@ -1,0 +1,35 @@
+<div class="content_area">
+    <div class="jumbotron" style="margin-bottom:0px;">
+        <h2 class="text-center"><em><b>网页数据特性分析</b></em></h2>
+        <i class="sec_title">-----数以万计的网站正遭受危机，快来分析下你的网站是否潜藏危险吧</i>
+    </div>
+    <div class="content_display">
+        <a href="#/" class="nav_link">home</a>
+        <span>&gt;</span>
+        <a href="#/start" class="nav_link">start</a>
+        <span>&gt;</span>
+        <a href="#/start/linkana" class="nav_link">linkana</a>
+        <a class="btn btn-success pull-right" href="#/start">回主功能菜单</a>
+        <hr class="navhr">
+        <div id="linkana_progress_area">
+            <div id="linkana_progress" class="col-xs-12 text-center"></div>
+            <h4 class="text-center">{{msg}}</h4>
+        </div>
+        <div id="linkana_result">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>恶意链接</th>
+                        <th>危险程度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="result in results">
+                        <td>{{result.url}}</td>
+                        <td>{{result.degree}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

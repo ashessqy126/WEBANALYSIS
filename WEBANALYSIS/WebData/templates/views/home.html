@@ -1,0 +1,56 @@
+<div class="content_area">
+    <div class="jumbotron" style="margin-bottom:0px;">
+        <h2 class="text-center"><em><b>网页数据特性分析</b></em></h2>
+        <i class="sec_title">-----数以万计的网站正遭受危机，快来分析下你的网站是否潜藏危险吧</i>
+    </div>
+    <div class="content_display">
+        <a href="#/" class="nav_link">home</a>
+        <a class="btn btn-success pull-right" href="#/start" ng-if="hashis">已有历史记录，回到上次选择画面</a>
+        <hr class="navhr">
+        <div class="panel panel-primary" id="input_area" ng-show='inputshow'>
+            <div class="panel-heading">
+                <h4>开始爬取</h4>
+            </div>
+            <div class="panel-body">
+                <div class="input-group">
+                    <span class="input-group-addon glyphicon glyphicon-search"></span>
+                    <input type="text" class="form-control" aria-label="website" placeholder="请输入网站" ng-model="website">
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon glyphicon glyphicon-home"></span>
+                    <input type="text" class="form-control" aria-label="domain" placeholder="请输入域名" ng-model="domain">
+                </div>
+                <br>
+                <button class="pull-right btn btn-info" ng-click="confirm()">确定</button>
+            </div>
+        </div>
+        <div id="choose" ng-show='!inputshow' class="row">
+            <div class="col-xs-12 col-md-3 col-md-offset-2">
+                <div class="thumbnail">
+                    <img src="images/craw.jpg" alt="..." width="100px">
+                    <div class="caption">
+                        <h3 class='text-center'>立即开始发现之旅</h3>
+                        <a class="text-center btn btn-success btn_bg" ng-click="start()"><b>开始爬取网页</b></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-3 col-md-offset-1">
+                <div class="thumbnail">
+                    <img src="images/trash.png" alt="trash" width="100px">
+                    <div class="caption">
+                        <h3 class='text-center'>清除旧缓存</h3>
+                        <button class="text-center btn btn-success btn_bg" ng-click="deleteCaches()"><b>清除</b></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="progress" style="width:70%;margin:auto" ng-show="progressshow">
+            正在删除。。。
+            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:50%">
+            </div>
+        </div>
+    </div>
+</div>
+</div>

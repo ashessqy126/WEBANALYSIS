@@ -1,0 +1,64 @@
+<div class="content_area">
+    <div class="jumbotron" style="margin-bottom:0px;">
+        <h2 class="text-center"><em><b>网页数据特性分析</b></em></h2>
+        <i class="sec_title">-----数以万计的网站正遭受危机，快来分析下你的网站是否潜藏危险吧</i>
+    </div>
+    <div class="content_display">
+        <a href="#/" class="nav_link">home</a>
+        <span>&gt;</span>
+        <a href="#/start" class="nav_link">start</a>
+        <a href="#/" class="btn btn-success pull-right">重新爬取资源</a>
+        <hr class="navhr">
+        <h4 style="margin-left:50px;" ng-show="completed">静态匹配</h4>
+        <hr>
+        <div class="row" id="static_choice">
+            <div id="progress" class="col-xs-12 col-md-2 text-center"></div>
+            <div class="col-md-4 hidden-xs col-md-offset-2" ng-show="!completed">
+                <br>
+                <br>
+                <h4>{{webstatus}}</h4>
+            </div>
+            <div class="col-xs-12 col-md-3 col-md-offset-1" ng-show="completed">
+                <div class="thumbnail">
+                    <img src="images/Infinity-Loop.png" alt="link_analysis" width="100px">
+                    <div class="caption">
+                        <h3 class='text-center'>恶意链接分析</h3>
+                        <a class="text-center btn btn-success btn_bg" href='#/start/linkana' ng-click="startlinkana()"><b>分析</b></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-3" ng-show="completed">
+                <div class="thumbnail">
+                    <img src="images/Clipboard.png" alt="scanfile" width="100px">
+                    <div class="caption">
+                        <h3 class='text-center'>网页元素分析</h3>
+                        <a class="text-center btn btn-success btn_bg" href='#/start/scanfile' ng-click="startscanfile()"><b>分析</b></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-3" ng-show="completed">
+                <div class="thumbnail">
+                    <img src="images/Pensils.png" alt="badcode" width="100px">
+                    <div class="caption">
+                        <h3 class='text-center'>恶意代码分析</h3>
+                        <a class="text-center btn btn-success btn_bg" href='#/start/badcode'><b>分析</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 style="margin-left:50px" ng-show="completed">动态监控</h4>
+        <hr>
+        <div class="row">
+            <div class="col-xs-12 col-md-3 col-md-offset-4" ng-show="completed">
+                <div class="thumbnail">
+                    <img src="images/Pensils.png" alt="badcode" width="100px">
+                    <div class="caption">
+                        <h3 class='text-center'>动态监控结果</h3>
+                        <a class="text-ceter btn btn-success btn_bg" href='#/start/watchsys'><b>查看</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="text-center"><i>分析网站:{{website}}</i></h4>
+    </div>
+</div>

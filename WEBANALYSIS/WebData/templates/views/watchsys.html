@@ -1,0 +1,34 @@
+<div class="content_area">
+    <div class="jumbotron" style="margin-bottom:0px;">
+        <h2 class="text-center"><em><b>网页数据特性分析</b></em></h2>
+        <i class="sec_title">-----数以万计的网站正遭受危机，快来分析下你的网站是否潜藏危险吧</i>
+    </div>
+    <div class="content_display">
+        <a href="#/" class="nav_link">home</a>
+        <span>&gt;</span>
+        <a href="#/start" class="nav_link">start</a>
+        <span>&gt;</span>
+        <a href="#/start/watchsys" class="nav_link">watchsys</a>
+        <a class="btn btn-success pull-right" href="#/start">回主功能菜单</a>
+        <hr class="navhr">
+    </div>
+    <div class="result_info">
+        <div class="text-center circle_danger cpu">
+            <i>处理器</i><br>
+            <i>{{sys.cpu_percent}}</i>
+        </div>
+        <div class="text-center circle_success mem">
+            <i>内存</i><br>
+            <i>{{sys.mem_percent}}</i>
+        </div>
+        <div class="text-center circle_info disk">
+            <i>磁盘利用率</i><br>
+            <i>{{sys.disk_usage}}</i>
+        </div>
+        <div class="text-center circle_warning swap">
+            <i>swap利用率</i><br>
+            <i>{{sys.swap_percent}}</i>
+        </div>
+        <div ng-class="{0:'text-center sys_status circle_success',1:'text-center sys_status circle_info',2:'text-center sys_status circle_warning',3:'text-center sys_status circle_danger'}[sys.status]"><i>{{sys.info}}</i></div>
+    </div>
+</div>

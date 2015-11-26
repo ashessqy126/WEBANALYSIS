@@ -1,0 +1,404 @@
+.GaugeMeter{
+		Position:				Relative;
+		Text-Align:			Center;
+		Overflow:				Hidden;
+		Cursor:				Default;
+	}
+
+	.GaugeMeter SPAN,
+	.GaugeMeter B{
+		Margin:				0 23%;
+		Width:					54%;
+		Position:				Absolute;
+		Text-Align:			Center;
+		Display:				Inline-Block;
+		Color:					RGBa(0,0,0,.8);
+		Font-Weight:			100;
+		Font-Family:			"Open Sans", Arial;
+		Overflow:				Hidden;
+		White-Space:			NoWrap;
+		Text-Overflow:		Ellipsis;
+	}
+	.GaugeMeter[data-style="Semi"] B{
+		Margin:				0 10%;
+		Width:					80%;
+	}
+
+	.GaugeMeter S,
+	.GaugeMeter U{
+		Text-Decoration:	None;
+		Font-Size:			.60em;
+		Font-Weight:			200;
+		Opacity:				.6;
+	}
+
+	.GaugeMeter B{
+		Color:					Black;
+		Font-Weight:			200;
+		Opacity:				.8;
+	}
+	BODY{
+		Margin:				0;
+		Padding:				0;
+		Width:				100%;
+		overflow-x: hidden;
+	}
+	PRE{
+		Background:			RGBa(0,0,0,.05);
+		Padding:				15px;
+		Border-Radius:		10px;
+		Position:				Relative;
+		Width:					350px;
+		Float:					Left;
+		Font-Weight:			100;
+		Letter-Spacing:		-1px;
+		Margin:				0 10px 10px 30px;
+	}
+
+	HR{
+		Clear:					Both;
+		Margin-Top:			230px;
+		Margin-Bottom:		10px;
+		Width:					100%;
+		Border:				0;
+		Height:				1px;
+		Background:			#21B4F9;
+	}
+
+	DIV.GaugeMeter{
+		Float:					Left;
+	}
+
+	H1{
+		Font:					Normal Bold 24px/24px "Open Sans", Arial;
+		Color:					#2C94E0;
+		Margin-Left:			10px;
+	}
+
+	H1 B{
+		Font-Weight:			100;
+	}
+
+	H2{
+		Font:					Normal 700 20px/20px "Open Sans", Arial;
+		Color:					DarkBlue;
+		Margin-Top:			60px;
+		Margin-Left:			10px;
+	}
+
+	H3{
+		Font:					Normal 600 16px/16px "Open Sans", Arial;
+		Color:					DarkBlue;
+		Margin-Top:			30px;
+		Margin-Left:			20px;
+	}
+	H3 B{
+		Font-Weight:			100;
+	}
+
+	P{
+		Font:					Normal 100 15px/15px Arial;
+		Color:					Black;
+		Margin-Bottom:		20px;
+		Margin-Left:			20px;
+	}
+	
+
+	UL{
+		Color:					#2C94E0;
+		List-Style-Type:	Square;
+		Padding-Left:		0;
+		Margin-Bottom:		20px;
+		Margin-Left:			10px;
+	}
+	
+	UL.Cols2{
+		-webkit-column-count:	3;
+		-webkit-column-gap:	0.5em;
+		-moz-column-count:		3;
+		-moz-column-gap:		0.5em;
+		column-count:			3;
+		column-gap:				0.5em;
+	}
+
+	UL LI{
+		Margin-Left:			30px;
+		-webkit-column-break-inside:	Avoid;
+		-moz-column-break-inside:		Avoid;
+		column-break-inside:				Avoid;
+	}
+
+	LI P{
+		Margin:				3px 0 !important;
+	}
+
+
+	PRE.Code{
+		Letter-Spacing:		0;
+		Width:					Auto;
+		Width:					calc(100vw - 70px);
+		Color:					#6AA121;
+		Float:					None;
+		Font-Size:			13px;
+		Line-Height:			20px;
+		Margin-Bottom:		50px;
+		Margin-Left:			30px;
+		Border-Left:			4px Solid #2C94E0;
+		Border-Radius:		1px 10px 10px 1px;
+		Padding:				0 10px 0 0;
+		Background-Image: Linear-Gradient(Transparent 50%, RGBa(255,255,255,.6) 50%);
+		Background-Size:	40px 40px;
+		Counter-Reset:		Line-Numbering;
+		Word-Break:			Break-Word;
+	}
+	PRE.Code .Line::before{
+		Content:				Counter(Line-Numbering);
+		Counter-Increment:Line-Numbering;
+		Min-Width:			3em;
+		Padding-Right:		1em;
+		Margin-Right:		1em;
+		Display:				Inline-Block;
+		Text-Align:			Right;
+		Color:					RGBa(44,148,224,.7);
+		Border-Right:		1px Solid #2C94E0;
+		Background:			RGBa(44,148,224,.04);
+		-webkit-touch-callout:	None;
+		-webkit-user-select:		None;
+		-khtml-user-select:		None;
+		-moz-user-select:			None;
+		-ms-user-select:			None;
+		user-select:					None;
+	}
+
+
+	#Header{
+		min-Height:360px;
+	}
+
+	HEADER,
+	FOOTER{
+		Width:					100%;
+		z-Index:				1;
+		Top:					0;
+		Margin:				0;
+		Padding:				10px 0 0 0;
+		Text-Align:			Center;
+		Background:			#21B4F9;
+		Background:			#2C94E0;
+		Background: 			Linear-Gradient(45deg, #2C94E0, #21B4F9), URL(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAnCAQAAAAmqpm+AAAAUUlEQVR4AWMgDvyXJEoV7/AwjnckGzdq3Khxo8apDQvj/kuCIS9OqIYCefFD4tzG+F+NGFW0Mo7ysBvNFaPGjRo3apzkIDfuP89/XipASQgEAF4fpQGYXVnnAAAAAElFTkSuQmCC);
+		Background-Blend-Mode: Lighten;
+		Box-Shadow:			0 0 20px 0 rgba(0,0,0,.4);
+		-Moz-Animation:		BluePrint 60s Infinite;
+		-Webkit-Animation:	BluePrint 60s Infinite;
+		Animation:				BluePrint 60s Infinite;
+	}
+
+	@-moz-keyframes BluePrint{
+			0%					{Background-Position: 0 0;}
+		100%					{Background-Position: 1100% 100%;}
+	}
+	
+	@-webkit-keyframes BluePrint{
+			0%					{Background-Position: 0 0;}
+		100%					{Background-Position: 1100% 100%;}
+	}
+	
+	@keyframes BluePrint{
+			0%					{Background-Position: 0 0;}
+		100%					{Background-Position: -100% 100%;}
+	}
+
+	HEADER H1{
+		Color:					White;
+		Font:					Normal 400 28px/28px "Helvetica", Arial;
+		Margin:				30px Auto 20px Auto;
+		Text-Shadow:			0 2px 10px rgba(0,0,0,.3);
+	}
+
+	HEADER P{
+		Color:					White;
+		Font:					Normal 200 18px/22px "Helvetica", Arial;
+		Margin:				0 Auto;
+		Text-Shadow:			0 1px 5px rgba(0,0,0,.3);
+	}
+	HEADER P.SubTitle{
+		Color:					White;
+		Font:					Normal 200 15px/22px "Helvetica", Arial;
+		Margin:				0 Auto;
+		Text-Shadow:			0 1px 5px rgba(0,0,0,.3);
+	}
+
+	HEADER .Preview{
+		Overflow:				Auto;
+		Margin-Top:			30px;
+		Display:				Inline-Block;
+	}
+
+	HEADER .Preview .GaugeMeter{
+		Margin:				0 10px;
+	}
+
+
+	TABLE{
+		Font:					Normal Normal 12px/14px "Open Sans", Arial;
+		Border-Collapse:	Collapse;
+		Margin:				0 10px 10px 30px;
+		Width:					calc(100vw - 55px);
+		Border-Bottom:		2px Solid #2C94E0;
+	}
+
+	TR{
+		Margin:				1px;
+		Padding:				0;
+	}
+
+	TR:Hover{
+		Background:			RGBa(33,180,249,.1) !important;
+	}
+	TR:not(.TableHead):Hover TH{
+		Background:			RGBa(33,180,249,.11) !important;
+	}
+
+	TD, TH{
+		Text-Align:			Center;
+		Margin:				0!imporatant;
+		Padding:				0 !imporatant;
+		Border-Right:		1px Solid LightGray;
+		Border-Bottom:		1px Solid #2C94E0;
+		Padding:				10px;
+		Vertical-Align:		Top;
+		Text-Align:			Left;
+	}
+	TR:nth-child(odd){
+		Background:			#F7F7F7;
+	}
+	TH{
+		Border-Right:		1px Solid #2C94E0;
+		Font:					Normal Bold 12px/14px MonoSpace;
+		White-Space:			NoWrap;
+	}
+
+
+	.Col1{
+		Width:					180px !important;
+		Padding:				10px !important;
+	}
+
+	.Col2{
+		Width:					50px !important;
+		Text-Align:			Center;
+		Padding:				10px !important;
+	}
+
+	.Col3{
+		Width:					100px !important;
+		Text-Align:			Center;
+		Padding:				10px !important;
+		Color:					#6AA121;
+		Font:					Italic Normal 11px/14px Monospace, Arial;
+	}
+	.Col3 em{
+		Font:					Italic Normal 12px/14px "Open Sans", Arial;
+		Color:					Silver;
+	}
+
+	.Col4{
+		Width:					200px !important;
+		Padding:				10px !important;
+	}
+	.Col4 DIV{
+		Width:					180px !important;
+		Background:			#EFEFEF;
+		Margin:				2px 0 10px 0;
+		Padding:				5px 10px;
+		Font:					Normal Bold 10px/14px "Open Sans", Arial;
+		Color:					White;
+		Text-Shadow:			0 1px 6px rgba(0,0,0,.6);
+		Box-Shadow:			0 1px 6px rgba(0,0,0,.2);
+	}
+	.Col4 DIV:before{
+		Content:				"0%";
+	}
+	.Col4 DIV span:after{
+		Content:				"100%";
+		Text-Decoration:	None;
+		Float:					Right;
+	}
+
+	TH.Col4{
+		Text-Align:			Center;
+	}
+
+	.Col5{
+		Border-Right:		None;
+		Min-Width:			90% !important;
+		Padding:				10px !important;
+	}
+
+	TABLE I{
+		Color:					#6AA121;
+		Font:					Italic Normal 12px/14px Monospace, Arial;
+	}
+
+	.TableHead TH{
+		Background:			#2C94E0;
+		Font:					Normal Bold 12px/18px "Open Sans", Arial;
+		Padding:				8px 10px 5px 10px;
+		Color:					White;
+		Vertical-Align:		Middle;
+		Border-Right:		1px Solid White;
+	}
+	.TableHead TH:last-child{
+		Border-Right:		None;
+	}
+
+	.Hide {
+		Display:				None;
+	}
+	DIV.StickyHeader{
+		Position:				Fixed;
+		Top:					0;
+	}
+	DIV.StickyHeader TABLE{
+		Border-Bottom:		None;
+	}
+
+	FOOTER{
+		Width:					100%;
+		z-Index:				1;
+		Top:					0;
+		Margin:				60px 0 0 0;
+		Padding:				20px 0 15px 0;
+		Text-Align:			Left;
+		Overflow:				Hidden;
+		Background:			#21B4F9;
+		Background:			#2C94E0;
+		Background: 			Linear-Gradient(-45deg, #2C94E0, #21B4F9), URL(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAnCAQAAAAmqpm+AAAAUUlEQVR4AWMgDvyXJEoV7/AwjnckGzdq3Khxo8apDQvj/kuCIS9OqIYCefFD4tzG+F+NGFW0Mo7ysBvNFaPGjRo3apzkIDfuP89/XipASQgEAF4fpQGYXVnnAAAAAElFTkSuQmCC);
+		Background-Blend-Mode: Lighten;
+		Box-Shadow:			0 0 20px 0 rgba(0,0,0,.4);
+	}
+
+	FOOTER A,
+	FOOTER A:Hover{
+		Color:					White;
+		Text-Decoration:	None;
+	}
+	FOOTER A:Hover B{
+		Color:					RGBa(255,255,255,1);
+	}
+
+	FOOTER H4{
+		Font:					Normal 400 18px/36px "Open Sans", Arial;
+		Color:				White;
+		Margin:				0;
+		Padding:				0 28px 0 28px;
+		Text-Shadow:		0 1px 2px rgba(0,0,0,.1);
+	}
+	FOOTER H4 B{
+		Font:					Normal 400 18px/26px "Open Sans", Arial;
+		Color:				RGBa(255,255,255,.6);
+	}
+	FOOTER H4 I{
+		Font:					Normal 100 14px/36px "Open Sans", Arial;
+		Float:				Right;
+	}
